@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import DarkParticles from '../components/DarkParticles';
 import { motion } from 'framer-motion';
+import Logo from '../assets/logo1.jpeg';
 
 const Navbar = () => (
   <motion.nav 
     initial={{ y: -100 }}
     animate={{ y: 0 }}
     transition={{ duration: 0.6 }}
-    className="fixed top-0 left-0 right-0 z-20 px-6 py-4 flex justify-between items-center"
+    className="fixed top-0 bg-transparent backdrop-blur-3xl left-0 right-0 z-20 px-6 py-4 flex justify-between items-center"
   >
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
-      className="text-white text-xl font-bold"
+      className="text-white flex items-center text-xl font-bold"
     >
-      tokenmail
+      <img src={Logo} alt="Logo" className="w-[60px] h-[60px] rounded-full" />
+      creatormail
     </motion.div>
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,10 +25,10 @@ const Navbar = () => (
       transition={{ delay: 0.3 }}
       className="flex gap-4"
     >
-      <button className="px-4 py-2 text-white bg-green-500/20 rounded-lg hover:bg-green-500/30 transition-all">
+      <button className="px-4 py-2 text-white bg-transparent border border-[#1fe817] rounded-lg hover:bg-green-500/30 text-sm transition-all">
         Add your token
       </button>
-      <button className="px-4 py-2 bg-white text-green-900 rounded-lg hover:bg-opacity-90 transition-all font-medium">
+      <button className="px-4 py-2 bg-[#1fe817] text-xs rounded-lg hover:bg-opacity-90 transition-all font-medium">
         Send Now
       </button>
     </motion.div>
