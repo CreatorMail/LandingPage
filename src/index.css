@@ -3,3 +3,17 @@
 * {
     font-family: "Poppins", serif;
 }
+
+
+@theme {
+    /* Typography */
+    --font-poppins: "Poppins", sans-serif;
+  
+    /* Colors */
+    --color-primary: #72E485;
+    --color-secondary: #F9D658;
+    --color-dark: #101010;
+    --color-light: #F8F8F8;
+    --color-soft: #EEEDF0;
+    --color-white: #FFFFFF;
+  }
