@@ -15,7 +15,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-[#191A1B] to-[#0E0F0F]">
       <Navbar />
       <main>
         <Hero />

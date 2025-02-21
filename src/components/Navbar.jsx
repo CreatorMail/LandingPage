@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#101010] bg-opacity-95 backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent bg-opacity-95 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -24,12 +24,12 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex text-sm items-center space-x-8">
-            <a href="#learn" className="text-white hover:text-[#72E485] transition-colors">
+          <div className="hidden cursor-pointer md:flex text-sm items-center space-x-8">
+            <a href="#learn" className="text-white hover:text-[#F9D75A] transition-colors">
               Learn
             </a>
             <div className="relative group">
-              <button className="flex items-center text-white hover:text-[#72E485] transition-colors">
+              <button className="flex items-center text-white hover:text-[#F9D75A] transition-colors">
                 App <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute hidden group-hover:block w-48 bg-white rounded-lg shadow-lg mt-2 py-2">
@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="relative group">
-              <button className="flex items-center text-white hover:text-[#72E485] transition-colors">
+              <button className="flex items-center text-white hover:text-[#F9D75A] transition-colors">
                 Community <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute hidden group-hover:block w-48 bg-white rounded-lg shadow-lg mt-2 py-2">
@@ -46,14 +46,14 @@ const Navbar = () => {
                 <a href="#blog" className="block px-4 py-2 hover:bg-gray-100">Blog</a>
               </div>
             </div>
-            <a href="#work" className="text-white hover:text-[#72E485] transition-colors">
+            <a href="#work" className="text-white hover:text-[#F9D75A] transition-colors">
               Unine at Work
             </a>
           </div>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex text-sm items-center space-x-4">
-            <a href="#signup" className="text-white hover:text-[#72E485] transition-colors">
+            <a href="#signup" className="text-white hover:text-[#F9D75A] transition-colors">
               Sign up
             </a>
             <a

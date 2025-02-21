@@ -1,55 +1,95 @@
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react';
 import { Shield, ShoppingBag, CreditCard, Truck } from 'lucide-react'
+import { BackgroundBeams } from "./ui/background-beams";
 
 const features = [
   {
     icon: Shield,
-    title: 'Always Protected',
-    description: 'Shopping with UNINE is even more secure thanks to Buyer Protection.'
+    title: 'Secure Transfers',
+    description: 'Send and receive Creator tokens securely via email or domain, with end-to-end encryption.'
   },
   {
     icon: CreditCard,
-    title: 'Get Reward',
-    description: 'You can keep using your favorite card and keep getting rewards.'
+    title: 'Wallet-Free Transactions',
+    description: 'Effortlessly transfer digital assets without needing a wallet. Perfect for creators and businesses.'
   },
   {
     icon: ShoppingBag,
-    title: 'No Hidden fees',
-    description: 'You will only be charged when selling goods or requesting payment.'
+    title: 'No Hidden Fees',
+    description: 'Enjoy transparent pricing with no hidden costs. Only pay for what you use.'
   },
   {
     icon: Truck,
-    title: 'Free Shipping',
-    description: 'Changed your mind after buying? Send back the item you purchased.'
+    title: 'Instant Delivery',
+    description: 'Tokens are delivered instantly to the recipient’s email or domain, ensuring seamless transactions.'
   }
-]
+];
+
 
 const FeatureCard = ({ icon: Icon, title, description }) => {
+  const [rotation, setRotation] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  
+  // Animation for the rotating gradient border
+  useEffect(() => {
+    if (!isHovered) return;
+    
+    const interval = setInterval(() => {
+      setRotation(prev => (prev + 1) % 10);
+    }, 50);
+    
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
   return (
-    <motion.div
-      whileHover={{ 
-        y: -8, 
-        backgroundColor: '#e6e65c',
-        boxShadow: '0 20px 40px rgba(230, 230, 92, 0.15)'
-      }}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="w-[282px] h-[318px] p-[35px] rounded-[15px] bg-white shadow-lg transition-all duration-300"
+    <div 
+      className="relative w-[282px] h-[318px]"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="h-full flex flex-col">
-        <Icon className="w-12 h-12 mb-6 text-[#e6e65c]" />
-        <h3 className="text-xl font-bold mb-4">{title}</h3>
-        <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  )
-}
+      {/* Animated gradient border - only visible on hover */}
+      {isHovered && (
+        <motion.div
+          className="absolute inset-0 rounded-[15px] z-0"
+          style={{
+            background: `linear-gradient(${rotation}deg, #e6e65c, #e36bae)`, // Yellow to pink - better color combo
+            padding: '2px',
+          }}
+          animate={{ rotate: rotation }}
+        />
+      )}
+      
+      {/* Main card content */}
+      <motion.div
+        whileHover={{ 
+          y: -8, 
+          backgroundColor: '',
+          color: 'black',
+          boxShadow: '0 20px 40px rgba(230, 230, 92, 0.15)'
+        }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="w-full h-full cursor-pointer border border-[#e6e65c] p-[35px] uppercase rounded-[15px] bg-transparent relative z-10 flex flex-col"
+      >
+        <div className="h-full flex flex-col">
+          <Icon className="w-12 h-12 mb-6 text-[#e6e65c]" />
+          <h3 className="text-xl text-white font-bold mb-4">{title}</h3>
+          <p className="text-gray-200 text-sm leading-relaxed">{description}</p>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+
 
 const Features = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 z-10 bg-black relative overflow-hidden">
+      <BackgroundBeams />
       {/* SVG Background */}
       <div className="absolute inset-0 w-full h-full">
         <svg 
@@ -87,10 +127,10 @@ const Features = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-6xl text-gray-100 font-bold mb-4">
             Safe & Convenient Transaction
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-2xl mx-auto">
             Want to pay anything so easy with the touch of a finger. Through UNINE, you can make practically any transaction.
           </p>
         </motion.div>

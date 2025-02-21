@@ -75,168 +75,193 @@ const FloatingShapes = () => {
 const Hero = () => {
   return (
     <div className="relative bg-gradient-to-b from-[#191A1B] to-[#0E0F0F] pt-32 px-6 mx-auto overflow-hidden">
-        <div className="max-w-[1300px] mx-auto">
+      <div className="max-w-[1300px] mx-auto">
+        <FloatingShapes />
 
-      <FloatingShapes />
-      
-      {/* 3D Grid Effect */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [transform-style:preserve-3d] [perspective:1000px] [transform:rotateX(60deg)] opacity-90" />
+        {/* 3D Grid Effect */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [transform-style:preserve-3d] [perspective:1000px] [transform:rotateX(60deg)] opacity-90" />
 
-      <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8"
-        >
-          <h1 className="text-5xl w-full max-w-[644px] lg:text-[32px] font-[300] leading-[72px] tracking-[-2%] text-white">
-            Send & receive Creator tokens effortlessly via email & domain
-          </h1>
-          <p className="text-[#D6D6D6] font-[400] text-[20px] leading-[30px] max-w-[480px]">
-            Effortless digital asset transfers on the Creator ecosystem. Send Creator testnet tokens via email or
-            domain—secure, seamless, and wallet-free.
-          </p>
-
-          <div className="flex flex-wrap gap-6 items-center">
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative cursor-pointer overflow-hidden"
-            >
-              <img src={ButtonImg || "/placeholder.svg"} draggable="false" alt="" />
-              <motion.div 
-                className="absolute inset-0 bg-transparent translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300" 
-              />
-            </motion.button>
-            <motion.button 
-              whileHover={{ x: 2 }} 
-              className="text-[#E7E7E7] underline underline-offset-4 text-[16px] font-medium"
-            >
-              See How It Works
-            </motion.button>
-          </div>
-
-          <div className="flex flex-wrap gap-8 pt-4">
-            {["Trusted by 4,000+ companies", "Free Forever", "Set up in just 1 day"].map((text) => (
-              <motion.div
-                key={text}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="flex items-center gap-2 text-[#18A963]"
-              >
-                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
-                  <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
-                </svg>
-                <span className="text-white text-sm">{text}</span>
-              </motion.div>
-            ))}
-          </div>
-
+        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-4"
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <div className="flex -space-x-3">
-              {reviews.map((src, i) => (
+            <h1 className="text-[32px] w-full max-w-[644px] lg:text-5xl font-bold leading-[62px] tracking-[-2%] text-white">
+              Send & receive Creator tokens effortlessly via email & domain
+            </h1>
+            <p className="text-[#D6D6D6] font-[400] text-[20px] leading-[30px] max-w-[480px]">
+              Effortless digital asset transfers on the Creator ecosystem. Send Creator testnet tokens via email or
+              domain—secure, seamless, and wallet-free.
+            </p>
+
+            <div className="flex flex-wrap gap-6 items-center">
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative cursor-pointer overflow-hidden"
+              >
+                <img src={ButtonImg || "/placeholder.svg"} draggable="false" alt="" />
+                <motion.div 
+                  className="absolute inset-0 bg-transparent translate-x-[101%] group-hover:translate-x-0 transition-transform duration-300" 
+                />
+              </motion.button>
+              <motion.button 
+                whileHover={{ x: 2 }} 
+                className="text-[#E7E7E7] underline underline-offset-4 text-[16px] font-medium"
+              >
+                See How It Works
+              </motion.button>
+            </div>
+
+            <div className="flex flex-wrap gap-8 pt-4">
+              {["Trusted by 40+ companies", "Free Forever", "Set up in just 1 day"].map((text) => (
                 <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                  key={text}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="flex items-center gap-2 text-[#F9D658]"
                 >
-                  <img
-                    src={src || "/placeholder.svg"}
-                    width={40}
-                    height={40}
-                    alt="Review avatar"
-                    className="rounded-[12px] border-2 border-[#121212] object-cover w-[40px] h-[39px]"
-                  />
+                  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
+                    <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                  </svg>
+                  <span className="text-white text-sm">{text}</span>
                 </motion.div>
               ))}
             </div>
-            <div className="flex flex-col items-center gap-1">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex items-center gap-4"
+            >
+              <div className="flex -space-x-3">
+                {reviews.map((src, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.3 + i * 0.1 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
                   >
-                    <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <img
+                      src={src || "/placeholder.svg"}
+                      width={40}
+                      height={40}
+                      alt="Review avatar"
+                      className="rounded-[12px] border-2 border-[#121212] object-cover w-[40px] h-[39px]"
+                    />
                   </motion.div>
                 ))}
-                <span className="text-white text-[16px] ml-2 font-[400]">5.0</span>
               </div>
-              <span className="text-[#B8B8B8] font-normal text-[1rem]">from 200+ reviews</span>
-            </div>
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.3 + i * 0.1 }}
+                    >
+                      <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    </motion.div>
+                  ))}
+                  <span className="text-white text-[16px] ml-2 font-[400]">5.0</span>
+                </div>
+                <span className="text-[#B8B8B8] font-normal text-[1rem]">from 200+ reviews</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex items-center gap-4"
+            >
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-black/20 border border-[#ffffff26] rounded-lg px-5 py-3 hover:opacity-90 transition-all duration-300 flex items-center gap-3"
+              >
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%F0%9F%A6%86%20icon%20_apple%20app%20store_-4xSlAM9tDLhkKnWHaoQa0nneXINhaX.svg"
+                  width={30}
+                  height={30}
+                  draggable="false"
+                  alt="Apple logo"
+                  className="h-[30px] w-auto"
+                />
+                <div className="flex flex-col">
+                  <span className="text-[12px] text-gray-300">Download on the</span>
+                  <span className="text-[18px] font-medium text-white leading-tight">App Store</span>
+                </div>
+              </motion.a>
+              
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-black/20 border border-[#ffffff26] rounded-lg px-5 py-3 hover:opacity-90 transition-all duration-300 flex items-center gap-3"
+              >
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%F0%9F%A6%86%20icon%20_Google%20Play_-W5f0Oyy9YNAvkfXQYjGzVTdYtdyCWc.svg"
+                  width={30}
+                  height={30}
+                  draggable="false"
+                  alt="Google Play logo"
+                  className="h-[30px] w-auto"
+                />
+                <div className="flex flex-col">
+                  <span className="text-[12px] text-gray-300">Get it on</span>
+                  <span className="text-[18px] font-medium text-white leading-tight">Google Play</span>
+                </div>
+              </motion.a>
+            </motion.div>
           </motion.div>
 
+          {/* Right Content - iPhone Mockup */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex gap-32 pl-32 pt-4"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative mt-12 min-h-[781px] w-full max-w-[986px] mx-auto"
           >
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%F0%9F%A6%86%20icon%20_apple%20app%20store_-4xSlAM9tDLhkKnWHaoQa0nneXINhaX.svg"
-              width={115}
-              height={115}
-              draggable="false"
-              alt="App Store"
-              className="hover:opacity-90 transition-opacity cursor-pointer"
-            />
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%F0%9F%A6%86%20icon%20_Google%20Play_-W5f0Oyy9YNAvkfXQYjGzVTdYtdyCWc.svg"
-              width={115}
-              height={115}
-              draggable="false"
-              alt="Google Play"
-              className="hover:opacity-90 transition-opacity cursor-pointer"
-            />
+            <motion.div
+              initial={{ y: 2 }}
+              animate={{ y: -10 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 2,
+                ease: "easeInOut",
+              }}
+              className="relative z-10"
+            >
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone%2013%20Pro-iH1FcON1kiMkbAlBZakyEDCzIeT5fE.svg"
+                width={986}
+                height={781}
+                draggable="false"
+                alt="iPhone mockup"
+                className="w-full h-full object-contain scale-[1.4]"
+              />
+              
+              {/* 3D shadow effect */}
+              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[80%] h-[20px] bg-black opacity-20 blur-xl rounded-full" />
+            </motion.div>
           </motion.div>
-        </motion.div>
-
-        {/* Right Content - iPhone Mockup */}
-        <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative mt-12 min-h-[781px] w-full max-w-[986px] mx-auto"
-        >
-          <motion.div
-            initial={{ y: 2 }}
-            animate={{ y: -10 }}
-            transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 2,
-              ease: "easeInOut",
-            }}
-            className="relative z-10"
-          >
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/iPhone%2013%20Pro-iH1FcON1kiMkbAlBZakyEDCzIeT5fE.svg"
-              width={986}
-              height={781}
-              draggable="false"
-              alt="iPhone mockup"
-              className="w-full h-full object-contain scale-[1.4]"
-            />
-            
-            {/* 3D shadow effect */}
-            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[80%] h-[20px] bg-black opacity-20 blur-xl rounded-full" />
-          </motion.div>
-        </motion.div>
         </div>
-      {/* Background Effects */}
+
+        {/* Blurred Gradient Overlay at the Bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0E0F0F] to-transparent blur-[600px]" />
       </div>
     </div>
-  )
-}
+  );
+};
+
 
 export default Hero
