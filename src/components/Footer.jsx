@@ -26,7 +26,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <img src="/logo.svg" alt="Unine" className="h-8" />
+              <img src="/logo.svg" alt="Creatormail" className="h-8" />
               <p className="text-gray-400 mt-4 max-w-sm">
                 The next-generation crypto wallet for creators and their communities.
               </p>
@@ -93,7 +93,7 @@ const Footer = () => {
           className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-gray-400 text-sm">
-            © 2024 Unine. All rights reserved.
+            © 2024 CreatorMail. All rights reserved.
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-gray-400 hover:text-[#e6e65c] text-sm transition-colors">

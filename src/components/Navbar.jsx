@@ -47,7 +47,7 @@ const Navbar = () => {
               </div>
             </div>
             <a href="#work" className="text-white hover:text-[#F9D75A] transition-colors">
-              Unine at Work
+              Creatormail at Work
             </a>
           </div>
 
@@ -105,12 +105,9 @@ const Navbar = () => {
               Community
             </a>
             <a href="#work" className="block text-white hover:text-[#72E485]">
-              Unine at Work
+              Creatormail at Work
             </a>
             <div className="pt-4 space-y-3">
-              <a href="#signup" className="block text-white hover:text-[#72E485]">
-                Sign up
-              </a>
               <a
                 href="#demo"
                 className="block bg-[#72E485] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 text-center"

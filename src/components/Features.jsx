@@ -131,7 +131,7 @@ const Features = () => {
             Safe & Convenient Transaction
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Want to pay anything so easy with the touch of a finger. Through UNINE, you can make practically any transaction.
+            Want to pay anything so easy with the touch of a finger. Through Creatormail, you can make practically any transaction.
           </p>
         </motion.div>
 
