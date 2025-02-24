@@ -25,16 +25,13 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden cursor-pointer md:flex text-sm items-center space-x-8">
-            <a href="#learn" className="text-white hover:text-[#F9D75A] transition-colors">
-              Learn
-            </a>
             <div className="relative group">
               <button className="flex items-center text-white hover:text-[#F9D75A] transition-colors">
                 App <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute hidden group-hover:block w-48 bg-white rounded-lg shadow-lg mt-2 py-2">
-                <a href="#mobile" className="block px-4 py-2 hover:bg-gray-100">Mobile App</a>
-                <a href="#desktop" className="block px-4 py-2 hover:bg-gray-100">Desktop App</a>
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console" className="block px-4 py-2 hover:bg-gray-100">Android App</a>
+                <a href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console" className="block px-4 py-2 hover:bg-gray-100">IOS App</a>
               </div>
             </div>
             <div className="relative group">
@@ -42,8 +39,8 @@ const Navbar = () => {
                 Community <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               <div className="absolute hidden group-hover:block w-48 bg-white rounded-lg shadow-lg mt-2 py-2">
-                <a href="#forum" className="block px-4 py-2 hover:bg-gray-100">Forum</a>
-                <a href="#blog" className="block px-4 py-2 hover:bg-gray-100">Blog</a>
+                <a href="https://x.com/creatormail_?t=EDyX8M6Q_d1Ubs3Qz3kKVQ&s=09" className="block px-4 py-2 hover:bg-gray-100">Forum (X)</a>
+                <a href="https://x.com/creatormail_?t=EDyX8M6Q_d1Ubs3Qz3kKVQ&s=09" className="block px-4 py-2 hover:bg-gray-100">Blog</a>
               </div>
             </div>
             <a href="#work" className="text-white hover:text-[#F9D75A] transition-colors">
@@ -52,13 +49,10 @@ const Navbar = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex text-sm items-center space-x-4">
-            <a href="#signup" className="text-white hover:text-[#F9D75A] transition-colors">
-              Sign up
-            </a>
+          <div className="hidden md:flex text-sm items-center space-x-">
             <a
-              href="#demo"
-              className="bg-[#e6e65c] text-black px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+              href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console"
+              className="bg-[#e6e65c] w-[151px] h-[49px] flex items-center justify-center text-black rounded-lg hover:bg-opacity-90 transition-colors"
             >
               Get a demo
             </a>

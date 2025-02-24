@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { Twitter, Instagram, DiscIcon as Discord, ArrowRight } from 'lucide-react'
+import Logo from "../assets/logo1.jpeg"
+
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Twitter, href: 'https://x.com/creatormail_?t=EDyX8M6Q_d1Ubs3Qz3kKVQ&s=09', label: 'Twitter' },
     { icon: Instagram, href: '#', label: 'Instagram' },
     { icon: Discord, href: '#', label: 'Discord' },
   ]
@@ -26,7 +28,8 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <img src="/logo.svg" alt="Creatormail" className="h-8" />
+              <img src={Logo} alt="Creatormail" className="h-8" />
+              CreatorMail
               <p className="text-gray-400 mt-4 max-w-sm">
                 The next-generation crypto wallet for creators and their communities.
               </p>
