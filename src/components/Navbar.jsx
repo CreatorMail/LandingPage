@@ -51,7 +51,7 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex text-sm items-center space-x-">
             <a
-              href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console"
+              href="https://appdistribution.firebase.dev/i/e8ff3364adeac788"
               className="bg-[#e6e65c] w-[151px] h-[49px] flex items-center justify-center text-black rounded-lg hover:bg-opacity-90 transition-colors"
             >
               Get a demo

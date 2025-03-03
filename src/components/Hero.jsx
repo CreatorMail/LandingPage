@@ -182,7 +182,7 @@ const Hero = () => {
               className="flex items-center gap-4"
             >
               <motion.a
-                href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console"
+                href="https://appdistribution.firebase.dev/i/e8ff3364adeac788"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-black/20 border border-[#ffffff26] rounded-lg px-5 py-3 hover:opacity-90 transition-all duration-300 flex items-center gap-3"
@@ -202,7 +202,7 @@ const Hero = () => {
               </motion.a>
               
               <motion.a
-                href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console"
+                href="https://appdistribution.firebase.dev/i/e8ff3364adeac788"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-black/20 border border-[#ffffff26] rounded-lg px-5 py-3 hover:opacity-90 transition-all duration-300 flex items-center gap-3"

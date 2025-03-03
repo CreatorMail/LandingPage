@@ -46,7 +46,7 @@ const Download = () => {
                 
                 <div className="flex flex-col gap-4">
                   <motion.a
-                    href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console"
+                    href="https://appdistribution.firebase.dev/i/e8ff3364adeac788"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="flex items-center justify-between bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 group transition-colors"
@@ -66,7 +66,7 @@ const Download = () => {
                   </motion.a>
 
                   <motion.a
-                    href="https://appdistribution.firebase.google.com/testerapps/1:480551064849:android:70ebca12e0e974e94768b0/releases/2rk83tv9cdjcg?utm_source=firebase-console"
+                    href="https://appdistribution.firebase.dev/i/e8ff3364adeac788"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="flex items-center justify-between bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-4 group transition-colors"
